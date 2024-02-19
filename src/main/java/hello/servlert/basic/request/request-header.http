@@ -1,0 +1,7 @@
+
+
+###content type post요청으로 테스트
+POST http://localhost:8080/request-header
+Content-Type: text/plain
+
+hello!! 지금 테스트!!
