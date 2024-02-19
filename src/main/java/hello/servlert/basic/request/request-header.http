@@ -5,3 +5,11 @@ POST http://localhost:8080/request-header
 Content-Type: text/plain
 
 hello!! 지금 테스트!!
+
+###HTML Form 양식 테스트
+POST http://localhost:8080/request-param
+Content-Type: application/x-www-form-urlencoded
+
+username=kim
+age=256512
+
