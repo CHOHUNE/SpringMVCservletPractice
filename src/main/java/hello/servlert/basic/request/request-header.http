@@ -19,5 +19,13 @@ Content-Type: text/plain
 
 hello??
 
+###API 메시지 바디 : JSON
+POST http://localhost:8080/request-body-json
+Content-Type: application/json
+
+{
+  "username" : "hello",
+  "age" : 20
+}
 
 
