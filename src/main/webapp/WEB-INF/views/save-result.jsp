@@ -8,9 +8,10 @@
 <body>
 성공
 <ul>
-    <li>id=<%=((Member)request.getAttribute("member")).getId() %></li>
-    <li>id=<%=((Member)request.getAttribute("member")).getUsername() %></li>
-    <li>id=<%=((Member)request.getAttribute("member")).getAge() %></li>
+    <li>id=${member.id}</li>
+    <li>username=${member.username}</li>
+    <li>id=${member.age}</li>
+<%--    JSP 가 제공하는 프로퍼티 접근법  --%>
 </ul>
 <a href="/index.html">메인</a>
 </body>
