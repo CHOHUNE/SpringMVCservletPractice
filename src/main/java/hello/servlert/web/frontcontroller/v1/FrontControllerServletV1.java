@@ -1,14 +1,10 @@
-package hello.servlert.web.frontcontroller;
+package hello.servlert.web.frontcontroller.v1;
 
-import hello.servlert.web.frontcontroller.v1.MemberFormControllerV1;
-import hello.servlert.web.frontcontroller.v1.MemberListControllerV1;
-import hello.servlert.web.frontcontroller.v1.MemberSaveControllerV1;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.NoArgsConstructor;
 
 import java.io.IOException;
 import java.util.HashMap;

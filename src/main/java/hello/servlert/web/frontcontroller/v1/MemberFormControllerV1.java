@@ -1,6 +1,5 @@
 package hello.servlert.web.frontcontroller.v1;
 
-import hello.servlert.web.frontcontroller.ControllerV1;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
