@@ -22,8 +22,10 @@ public class FrontControllerServletV3 extends HttpServlet {
     public FrontControllerServletV3() {
         controllerMap.put("/front-controller/v3/members/new-form", new
                 MemberFormControllerV3());
+
         controllerMap.put("/front-controller/v3/members/save", new
                 MemberSaveControllerV3());
+
         controllerMap.put("/front-controller/v3/members", new
                 MemberListControllerV3());
     }
@@ -31,11 +33,14 @@ public class FrontControllerServletV3 extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse
             response)
             throws ServletException, IOException {
+
         String requestURI = request.getRequestURI();
         ControllerV3 controller = controllerMap.get(requestURI);
         if (controller == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return; }
+
+
         Map<String, String> paramMap = createParamMap(request);
         ModelView mv = controller.process(paramMap);
 
