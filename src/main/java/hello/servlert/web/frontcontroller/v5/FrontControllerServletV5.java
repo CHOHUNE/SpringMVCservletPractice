@@ -7,7 +7,11 @@ import hello.servlert.web.frontcontroller.v3.controller.MemberFormControllerV3;
 import hello.servlert.web.frontcontroller.v3.controller.MemberListControllerV3;
 import hello.servlert.web.frontcontroller.v3.controller.MemberSaveControllerV3;
 import hello.servlert.web.frontcontroller.v4.ControllerV4;
+import hello.servlert.web.frontcontroller.v4.controller.MemberFormControllerV4;
+import hello.servlert.web.frontcontroller.v4.controller.MemberListControllerV4;
+import hello.servlert.web.frontcontroller.v4.controller.MemberSaveControllerV4;
 import hello.servlert.web.frontcontroller.v5.adapter.ControllerV3HandlerApater;
+import hello.servlert.web.frontcontroller.v5.adapter.ControllerV4HandlerApater;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,12 +25,11 @@ import java.util.List;
 import java.util.Map;
 
 
-@WebServlet(name="frontControllerServlet5", urlPatterns = "/front-controller/v5/*")
+@WebServlet(name = "frontControllerServlet5", urlPatterns = "/front-controller/v5/*")
 public class FrontControllerServletV5 extends HttpServlet {
 
 
-
-//    private Map<String, ControllerV4> controllerMap = new HashMap<>();
+    //    private Map<String, ControllerV4> controllerMap = new HashMap<>();
 //    기존에 있던 V4 Controller
     private final Map<String, Object> handlerMappingMap = new HashMap<>();
 //v5 와 비교해보면 v5는 어떤 버전의 컨트롤러도 와야 하기 때문에 Object로 변경 되었다.
@@ -46,10 +49,16 @@ public class FrontControllerServletV5 extends HttpServlet {
         handlerMappingMap.put("/front-controller/v5/v3/members/save", new MemberSaveControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());
 
+        //v4추가
+        handlerMappingMap.put("/front-controller/v5/v4/members/new-form", new MemberFormControllerV4());
+        handlerMappingMap.put("/front-controller/v5/v4/members/save", new MemberSaveControllerV4());
+        handlerMappingMap.put("/front-controller/v5/v4/members", new MemberListControllerV4());
+
     }
 
     private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerApater());
+        handlerAdapters.add(new ControllerV4HandlerApater());
 
     }
 
