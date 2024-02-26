@@ -39,5 +39,4 @@ public class FrontControllerServletV2 extends HttpServlet {
         myView.render(request, response);
 
     }
-
 }

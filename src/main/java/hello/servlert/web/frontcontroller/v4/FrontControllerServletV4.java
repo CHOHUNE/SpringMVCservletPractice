@@ -8,6 +8,7 @@ import hello.servlert.web.frontcontroller.v4.controller.MemberListControllerV4;
 import hello.servlert.web.frontcontroller.v4.controller.MemberSaveControllerV4;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -16,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name="frontControllerServlet4",urlPatterns = "/front-controller/v4/*")
-public class FrontControllerServletV4 extends HelloServlet {
+public class FrontControllerServletV4 extends HttpServlet {
 
     private Map<String, ControllerV4> controllerMap = new HashMap<>();
     public FrontControllerServletV4() {
