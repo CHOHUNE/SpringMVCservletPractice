@@ -1,6 +1,5 @@
 package hello.servlert.web.springmvc.v2;
 
-
 import hello.servlert.domain.member.Member;
 import hello.servlert.domain.member.MemberRepository;
 import jakarta.servlet.http.HttpServletRequest;
@@ -50,6 +49,4 @@ public class SpringMemberControllerV2 {
 
         return mv;
     }
-
-
 }
